@@ -980,7 +980,8 @@ class MarkdownCompiler(Compiler):
         """Parse Markdown with Python Markdown."""
         sublime.status_message('converting markdown with Python markdown...')
         extensions, extension_configs = self.get_config_extensions()
-        md = Markdown(extensions=extensions, extension_configs=extension_configs)
+        tab_length = self.settings.get('python_markdown_tab_length', 4)
+        md = Markdown(extensions=extensions, extension_configs=extension_configs, tab_length=tab_length)
         html_text = md.convert(markdown_text)
         # Retrieve the meta data returned from the "meta" extension
         self.settings.add_meta(md.Meta)
