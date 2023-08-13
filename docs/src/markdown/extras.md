@@ -2,9 +2,10 @@
 
 ## MathJax Support
 
-!!! danger
-    GitHub and GitLab is not supported with MathJax. You will have to come up with a MathJax config that works for it
-    and escape problematic syntax that GitHub may try to convert.
+/// danger
+GitHub and GitLab is not supported with MathJax. You will have to come up with a MathJax config that works for it
+and escape problematic syntax that GitHub may try to convert.
+///
 
 To render Tex style math in Markdown, you can use the default MathJax configuration that is included with Markdown
 Preview or create and reference your own.
@@ -50,12 +51,14 @@ accommodate certain changes. Check out Arithmatex documentation for more info.
 
 ## KaTeX Support
 
-!!! warning
-    GitLab is already configured for KaTeX by default. You should just include `default` in your CSS and JS list.
+/// warning
+GitLab is already configured for KaTeX by default. You should just include `default` in your CSS and JS list.
+///
 
-!!! danger
-    GitHub is not supported with KaTeX. You will have to come up with a MathJax config that works for it and escape
-    problematic syntax that GitHub may try to convert.
+/// danger
+GitHub is not supported with KaTeX. You will have to come up with a MathJax config that works for it and escape
+problematic syntax that GitHub may try to convert.
+///
 
 To render Tex style math in Markdown, you can use the default KaTeX configuration that is included with Markdown Preview
 or create and reference your own.
@@ -114,8 +117,9 @@ certain changes. Check out Arithmatex documentation for more info.
 
 ## UML Support
 
-!!! danger
-    GitHub is not supported with UML.
+/// danger
+GitHub is not supported with UML.
+///
 
 If you are using the extension [SuperFences extension][superfences], it has an option to create special, custom fences.
 By default, it specifies `flow` and `sequence` languages to generate special code blocks that JavaScript can be applied

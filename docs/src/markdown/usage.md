@@ -1,24 +1,27 @@
 # Usage
 
-!!! info
-    When referring to settings, we are referring to the settings found at `Preferences`->`Package Settings`->`MarkdownPreview`.
+/// info
+When referring to settings, we are referring to the settings found at
+`Preferences`->`Package Settings`->`MarkdownPreview`.
+///
 
-    - `Settings - User` is where you change your settings for Markdown Preview.
-    - `Settings - Default` is a good reference with detailed descriptions for each setting.
+-   `Settings - User` is where you change your settings for Markdown Preview.
+-   `Settings - Default` is a good reference with detailed descriptions for each setting.
 
 ## To preview
 
-- Optionally select some of your markdown for conversion.
-- Use the shortcut ++cmd+shift+p++ then select `MarkdownPreview` to show the follow commands (you will be prompted to
-  select which parser you prefer):
-    - Markdown Preview: Preview in Browser
-    - Markdown Preview: Export HTML in Sublime Text
-    - Markdown Preview: Copy to Clipboard
-    - Markdown Preview: Open Markdown Cheat sheet
+-   Optionally select some of your markdown for conversion.
+-   Use the shortcut ++cmd+shift+p++ then select `MarkdownPreview` to show the follow commands (you will be prompted to
+    select which parser you prefer):
+
+    -   Markdown Preview: Preview in Browser
+    -   Markdown Preview: Export HTML in Sublime Text
+    -   Markdown Preview: Copy to Clipboard
+    -   Markdown Preview: Open Markdown Cheat sheet
 
     ![Usage Demo](images/sublimetext-markdown-preview.gif)
 
-- Or bind some shortcut in your user key binding, go to `Preferences --> Keybindings` then add to the User map:
+-   Or bind some shortcut in your user key binding, go to `Preferences --> Keybindings` then add to the User map:
 
     For a specific parser and target:
 
@@ -32,7 +35,7 @@
     { "keys": ["alt+m"], "command": "markdown_preview_select", "args": {"target": "browser"} },
     ```
 
-- If you want to control which browser the preview is opened in, you can edit the `browser` option in the settings file:
+-   If you want to control which browser the preview is opened in, you can edit the `browser` option in the settings file:
 
     ```js
         /*
@@ -69,19 +72,19 @@ By default, Markdown Preview uses a simple template, but you can use your own cu
 
 To get live updates while editing a file after preview, you need to do the following:
 
-1. Enable the `enable_autoreload` setting in `MarkdownPreview.sublime-settings`.
+1.  Enable the `enable_autoreload` setting in `MarkdownPreview.sublime-settings`.
     ```js
         /*
             Enable auto-reloaded on save. Will not work if GitHub parser or GitLab parser is used without oauth key specified.
         */
         "enable_autoreload": true,
     ```
-2. Install [LiveReload][live-reload] package from Package Control.
-3. Restart.
-4. Open the command palette and select the command `LiveReload: Enable/disable plug-ins`.
-5. Select `Simple Reload with delay (400ms)`.  It is possible you can get away with `Simple Reload`, but some experience
-   an issue where they are one rev behind when using `Simple Reload`.
-6. Edit document and enjoy live reload.
+2.  Install [LiveReload][live-reload] package from Package Control.
+3.  Restart.
+4.  Open the command palette and select the command `LiveReload: Enable/disable plug-ins`.
+5.  Select `Simple Reload with delay (400ms)`.  It is possible you can get away with `Simple Reload`, but some experience
+    an issue where they are one rev behind when using `Simple Reload`.
+6.  Edit document and enjoy live reload.
 
 You don't need to enable `Simple Reload` on every file as it is done globally; it can be turned on or off as needed.
 From now on, files should auto-reload when you open them in the browser unless you disable `Simple Reload`.
@@ -266,7 +269,7 @@ to `false`:
 If you add the `pymdownx.highlight` extension manually in the enabled extensions, you can override some of the default
 settings.
 
-* Turn language guessing *on* or *off* (*on* will highlight fenced blocks even if you don't specify a language):
+*   Turn language guessing *on* or *off* (*on* will highlight fenced blocks even if you don't specify a language):
 
     ```js
     "markdown_extensions": [
@@ -276,7 +279,7 @@ settings.
     ]
     ```
 
-* Show line numbers:
+*   Show line numbers:
 
     ```js
     "markdown_extensions": [
@@ -286,7 +289,7 @@ settings.
     ]
     ```
 
-* Change the highlight theme:
+*   Change the highlight theme:
 
     ```js
     "markdown_extensions": [
@@ -296,7 +299,7 @@ settings.
     ]
     ```
 
-* Inline the CSS:
+*   Inline the CSS:
 
     ```js
     "markdown_extensions": [
@@ -306,7 +309,7 @@ settings.
     ]
     ```
 
-* Use multiple:
+*   Use multiple:
     ```js
     "markdown_extensions": [
         "pymdownx.highlight": {
@@ -369,15 +372,15 @@ data.
 
 YAML frontmatter has a few special key names that are used that will not be handled as meta data:
 
-- **basepath**: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to
-  reference images in a different location.)
-- **references**: Can take a file path or an array of file paths for separate markdown files containing references,
-  footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file's directory, and
-  if the file cannot be found, it will use the `basepath` setting.
-- **destination**: This is an absolute file path or relative file path for when the markdown is saved to HTML via the
-  build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file
-  cannot be found, it will use the `basepath` setting.
-- **settings**: This is a dictionary where you can override settings that are in the settings file.
+-   **basepath**: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to
+    reference images in a different location.)
+-   **references**: Can take a file path or an array of file paths for separate markdown files containing references,
+    footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file's directory, and
+    if the file cannot be found, it will use the `basepath` setting.
+-   **destination**: This is an absolute file path or relative file path for when the markdown is saved to HTML via the
+    build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file
+    cannot be found, it will use the `basepath` setting.
+-   **settings**: This is a dictionary where you can override settings that are in the settings file.
 
 ```yaml
 ---
