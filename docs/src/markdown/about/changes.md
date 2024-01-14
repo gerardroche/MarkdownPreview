@@ -1,5 +1,10 @@
 # Changes
 
+## 2.5
+
+-   **NEW**: Update to latest GitHub styling. Dark mode is triggered by system theme.
+-   **NEW**: Allow specifying paths with `~` and variables like `$HOME` in `path_tempfile`.
+
 ## 2.4.3
 
 -   **FIX**: Fix issues related to changing code block color schemes.
